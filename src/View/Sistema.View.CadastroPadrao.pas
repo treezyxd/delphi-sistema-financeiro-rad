@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.WinXPanels;
 
 type
-  TForm1 = class(TForm)
+  TfrmCadastroPadrao = class(TForm)
     PnlPrincipal: TCardPanel;
     CardCadastro: TCard;
     CardPesquisa: TCard;
@@ -25,6 +25,13 @@ type
     btnAlterar: TButton;
     btnExcluir: TButton;
     btnImprimir: TButton;
+    Panel1: TPanel;
+    btnCancelar: TButton;
+    btnSalvar: TButton;
+    procedure btnIncluirClick(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,10 +39,30 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmCadastroPadrao: TfrmCadastroPadrao;
 
 implementation
 
 {$R *.dfm}
+
+procedure TfrmCadastroPadrao.btnAlterarClick(Sender: TObject);
+begin
+  PnlPrincipal.ActiveCard := CardCadastro;
+end;
+
+procedure TfrmCadastroPadrao.btnCancelarClick(Sender: TObject);
+begin
+  PnlPrincipal.ActiveCard := CardPesquisa;
+end;
+
+procedure TfrmCadastroPadrao.btnFecharClick(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+procedure TfrmCadastroPadrao.btnIncluirClick(Sender: TObject);
+begin
+  PnlPrincipal.ActiveCard := CardCadastro;
+end;
 
 end.

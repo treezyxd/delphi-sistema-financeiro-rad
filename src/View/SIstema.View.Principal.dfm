@@ -2,8 +2,8 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema Financeiro'
-  ClientHeight = 562
-  ClientWidth = 785
+  ClientHeight = 462
+  ClientWidth = 732
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,12 +13,17 @@ object frmPrincipal: TfrmPrincipal
   Menu = MainMenu1
   Position = poScreenCenter
   WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
   object MainMenu1: TMainMenu
     Left = 368
     Top = 208
     object menuCadastro: TMenuItem
       Caption = 'Cadastros'
+      object menuCadastroPadrao: TMenuItem
+        Caption = 'Cadastro Padr'#227'o'
+        OnClick = menuCadastroPadraoClick
+      end
     end
     object menuRelatorio: TMenuItem
       Caption = 'Relat'#243'rios'

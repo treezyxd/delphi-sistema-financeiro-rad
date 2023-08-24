@@ -1,7 +1,9 @@
-object Form1: TForm1
+object frmCadastroPadrao: TfrmCadastroPadrao
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Cadastro Padr'#227'o'
   ClientHeight = 480
   ClientWidth = 679
   Color = clBtnFace
@@ -10,6 +12,7 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   TextHeight = 15
   object PnlPrincipal: TCardPanel
     Left = 0
@@ -17,13 +20,11 @@ object Form1: TForm1
     Width = 679
     Height = 480
     Align = alClient
-    ActiveCard = CardPesquisa
+    ActiveCard = CardCadastro
     Caption = 'PnlPrincipal'
     TabOrder = 0
-    ExplicitLeft = 56
-    ExplicitTop = 16
-    ExplicitWidth = 409
-    ExplicitHeight = 281
+    ExplicitWidth = 673
+    ExplicitHeight = 471
     object CardCadastro: TCard
       Left = 1
       Top = 1
@@ -32,10 +33,64 @@ object Form1: TForm1
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitWidth = 671
+      ExplicitHeight = 469
+      object Panel1: TPanel
+        Left = 0
+        Top = 400
+        Width = 677
+        Height = 78
+        Align = alBottom
+        BevelOuter = bvNone
+        TabOrder = 0
+        ExplicitTop = 391
+        ExplicitWidth = 671
+        object btnCancelar: TButton
+          AlignWithMargins = True
+          Left = 573
+          Top = 3
+          Width = 101
+          Height = 72
+          Align = alRight
+          Caption = 'Cancelar'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ImageAlignment = iaTop
+          ImageIndex = 1
+          ImageMargins.Top = 10
+          ImageMargins.Bottom = -8
+          Images = ImageList1
+          ParentFont = False
+          TabOrder = 0
+          OnClick = btnCancelarClick
+          ExplicitLeft = 567
+        end
+        object btnSalvar: TButton
+          AlignWithMargins = True
+          Left = 466
+          Top = 3
+          Width = 101
+          Height = 72
+          Align = alRight
+          Caption = 'Salvar'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ImageAlignment = iaTop
+          ImageIndex = 6
+          ImageMargins.Top = 10
+          ImageMargins.Bottom = -8
+          Images = ImageList1
+          ParentFont = False
+          TabOrder = 1
+          ExplicitLeft = 460
+        end
+      end
     end
     object CardPesquisa: TCard
       Left = 1
@@ -45,10 +100,6 @@ object Form1: TForm1
       Caption = 'CardPesquisa'
       CardIndex = 1
       TabOrder = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object pnlPesquisa: TPanel
         Left = 0
         Top = 0
@@ -57,7 +108,6 @@ object Form1: TForm1
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitTop = -6
         object lblPesquisa: TLabel
           Left = 8
           Top = 24
@@ -99,9 +149,6 @@ object Form1: TForm1
           Images = ImageList1
           ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 576
-          ExplicitTop = -6
-          ExplicitHeight = 89
         end
       end
       object pnlPesquisaBotoes: TPanel
@@ -132,9 +179,7 @@ object Form1: TForm1
           Images = ImageList1
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 576
-          ExplicitTop = -6
-          ExplicitHeight = 89
+          OnClick = btnFecharClick
         end
         object btnIncluir: TButton
           AlignWithMargins = True
@@ -156,9 +201,7 @@ object Form1: TForm1
           Images = ImageList1
           ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 469
-          ExplicitTop = 0
-          ExplicitHeight = 78
+          OnClick = btnIncluirClick
         end
         object btnAlterar: TButton
           AlignWithMargins = True
@@ -180,9 +223,7 @@ object Form1: TForm1
           Images = ImageList1
           ParentFont = False
           TabOrder = 2
-          ExplicitLeft = 95
-          ExplicitTop = 0
-          ExplicitHeight = 78
+          OnClick = btnAlterarClick
         end
         object btnExcluir: TButton
           AlignWithMargins = True
@@ -204,9 +245,6 @@ object Form1: TForm1
           Images = ImageList1
           ParentFont = False
           TabOrder = 3
-          ExplicitLeft = 301
-          ExplicitTop = 6
-          ExplicitHeight = 78
         end
         object btnImprimir: TButton
           AlignWithMargins = True
@@ -228,9 +266,6 @@ object Form1: TForm1
           Images = ImageList1
           ParentFont = False
           TabOrder = 4
-          ExplicitLeft = 410
-          ExplicitTop = 6
-          ExplicitHeight = 78
         end
       end
       object pnlGrid: TPanel
@@ -241,10 +276,6 @@ object Form1: TForm1
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitLeft = 232
-        ExplicitTop = 218
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object DBGrid1: TDBGrid
           Left = 0
           Top = 0

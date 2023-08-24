@@ -12,6 +12,9 @@ type
     menuCadastro: TMenuItem;
     menuRelatorio: TMenuItem;
     menuAjuda: TMenuItem;
+    menuCadastroPadrao: TMenuItem;
+    procedure menuCadastroPadraoClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,6 +26,25 @@ var
 
 implementation
 
+uses
+  Sistema.View.CadastroPadrao,
+  Sistema.View.SplashScreen;
+
 {$R *.dfm}
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+  frmSplash := TfrmSplash.Create(nil);
+  try
+    frmSplash.ShowModal;
+  finally
+    FreeAndNil(frmSplash);
+  end;
+end;
+
+procedure TfrmPrincipal.menuCadastroPadraoClick(Sender: TObject);
+begin
+  frmCadastroPadrao.Show;
+end;
 
 end.
