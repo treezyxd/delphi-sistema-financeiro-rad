@@ -1,0 +1,4 @@
+[Banco de dados]
+DriverID = SQLite
+Database = C:\Users\treezy\Documents\Embarcadero\Studio\Projects\SistemaFinanceiro\db\SistemaFinanceiro.db
+LockingMode = Normal

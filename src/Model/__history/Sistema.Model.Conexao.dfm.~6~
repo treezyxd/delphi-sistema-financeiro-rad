@@ -1,0 +1,24 @@
+object DataModule1: TDataModule1
+  Height = 466
+  Width = 622
+  PixelsPerInch = 120
+  object SQLConexao: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\treezy\Documents\Embarcadero\Studio\Projects\S' +
+        'istemaFinanceiro\db\SistemaFinanceiro.db'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 48
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = SQLConexao
+    SQL.Strings = (
+      'SELECT * FROM usuarios')
+    Left = 56
+    Top = 144
+  end
+end

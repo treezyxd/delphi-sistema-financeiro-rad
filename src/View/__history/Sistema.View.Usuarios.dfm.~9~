@@ -1,0 +1,54 @@
+inherited frmUsuarios: TfrmUsuarios
+  Caption = 'Cadastro de Usuarios'
+  ClientHeight = 480
+  ClientWidth = 679
+  TextHeight = 15
+  inherited PnlPrincipal: TCardPanel
+    Width = 679
+    Height = 480
+    ActiveCard = CardPesquisa
+    inherited CardCadastro: TCard
+      ExplicitWidth = 677
+      ExplicitHeight = 478
+      inherited Panel1: TPanel
+        ExplicitTop = 400
+        ExplicitWidth = 677
+        inherited btnCancelar: TButton
+          ExplicitLeft = 573
+        end
+        inherited btnSalvar: TButton
+          ExplicitLeft = 466
+        end
+      end
+    end
+    inherited CardPesquisa: TCard
+      ExplicitWidth = 671
+      ExplicitHeight = 469
+      inherited pnlPesquisa: TPanel
+        ExplicitWidth = 671
+        inherited btnPesquisar: TButton
+          ExplicitLeft = 567
+        end
+      end
+      inherited pnlPesquisaBotoes: TPanel
+        ExplicitTop = 391
+        ExplicitWidth = 671
+        inherited btnFechar: TButton
+          ExplicitLeft = 567
+        end
+      end
+      inherited pnlGrid: TPanel
+        ExplicitWidth = 671
+        ExplicitHeight = 302
+        inherited DBGrid1: TDBGrid
+          DataSource = DataSource1
+        end
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = dmConexao.FDQuery1
+    Left = 609
+    Top = 322
+  end
+end

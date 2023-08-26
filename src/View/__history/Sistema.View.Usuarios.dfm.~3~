@@ -1,0 +1,32 @@
+inherited frmUsuarios: TfrmUsuarios
+  Caption = 'Cadastro de Usuarios'
+  ClientWidth = 679
+  TextHeight = 15
+  inherited PnlPrincipal: TCardPanel
+    Width = 679
+    ActiveCard = CardPesquisa
+    inherited CardCadastro: TCard
+      Height = 469
+    end
+    inherited CardPesquisa: TCard
+      Height = 469
+      ExplicitHeight = 469
+      inherited pnlPesquisaBotoes: TPanel
+        Top = 391
+        ExplicitTop = 391
+      end
+      inherited pnlGrid: TPanel
+        Height = 302
+        ExplicitHeight = 302
+        inherited DBGrid1: TDBGrid
+          Height = 302
+        end
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    OnDataChange = DataSource1DataChange
+    Left = 609
+    Top = 322
+  end
+end

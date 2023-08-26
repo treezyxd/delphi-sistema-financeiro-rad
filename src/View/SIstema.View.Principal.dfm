@@ -16,13 +16,13 @@ object frmPrincipal: TfrmPrincipal
   OnCreate = FormCreate
   TextHeight = 15
   object MainMenu1: TMainMenu
-    Left = 368
-    Top = 208
+    Left = 384
+    Top = 144
     object menuCadastro: TMenuItem
       Caption = 'Cadastros'
-      object menuCadastroPadrao: TMenuItem
-        Caption = 'Cadastro Padr'#227'o'
-        OnClick = menuCadastroPadraoClick
+      object menuUsuarios: TMenuItem
+        Caption = 'Usuarios'
+        OnClick = menuUsuariosClick
       end
     end
     object menuRelatorio: TMenuItem
